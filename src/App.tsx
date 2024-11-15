@@ -1,13 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import DeleteIcon from '@mui/icons-material/Delete';
 import WorkIcon from '@mui/icons-material/Work';
@@ -28,28 +21,7 @@ import Box from '@mui/material/Box';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 function App() {
-  // function createData(
-  //   po: string,
-  //   oe: string,
-  //   dateCreated: string,
-  //   createdTime: string,
-  //   createdBy: string,
-  //   customerNo: string,
-  //   customerName: string,
-  //   customerPO: string,
-  //   product: string
-  // ) {
-  //   return { po, oe, dateCreated, createdBy, createdTime, customerNo, customerName, customerPO, product };
-  // }
-  
-  // const rows = [
-  //   createData('2754057', '8308390', '11/15/2024', 'Vladica', '08:48 AM ET', '3000765', 'Schernecker', 'TURTORA', 'Provia'),
-  //   createData('2754058', '83012330', '11/14/2024', 'Jeff', '08:48 PM ET', '250520765', 'Marshall BLDG', 'CAROL', 'Harvey'),
-  //   createData('2754053', '8654390', '11/15/2024', 'Lauren', '01:30 PM ET', '100000765', 'Southend Exteriors', '4 eSTHER', 'Harvey'),
-  //   createData('2754052', '8302290', '11/13/2024', 'Danijel', '11:18 AM ET', '1064950', 'J & D Builders', 'TURTORA', 'Provia'),
-  //   createData('2754051', '2228390', '11/15/2024', 'Greg', '09:48 AM ET', '3000765', 'Exteriors LLC', 'Gruenwald', 'Harvey'),
-  // ];
-
+ 
   const rows = [
     { id: 1, PO: '2754057', OE: '8308390', DateCreated: '11/15/2024', CreatedTime: '08:48 AM ET',  CreatedBy: 'Christopher', CustomerNo: '100012732', CustomerName: 'Brennan', CustomerPO: 'TURTORA', Product: 'Provia' },
     { id: 2, PO: '2754056', OE: '8308391', DateCreated: '11/15/2024', CreatedTime: '08:48 AM ET',  CreatedBy: 'Geoffrey', CustomerNo: '1004042', CustomerName: 'J & D Builders', CustomerPO: 'CAROL', Product: 'Harvey' },
@@ -202,8 +174,8 @@ function App() {
                     placeholder="" 
                     fullWidth
                     InputLabelProps={{
-                      shrink: true, // Keeps the label always visible at the top
-                      style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' }, // Position label top right
+                      shrink: true, 
+                      style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' },
                     }} 
                     InputProps={{
                       endAdornment: (
@@ -223,8 +195,8 @@ function App() {
                     placeholder="" 
                     fullWidth
                     InputLabelProps={{
-                      shrink: true, // Keeps the label always visible at the top
-                      style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' }, // Position label top right
+                      shrink: true,
+                      style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' },
                     }} 
                     InputProps={{
                       endAdornment: (
@@ -244,8 +216,8 @@ function App() {
                   placeholder="" 
                   fullWidth
                   InputLabelProps={{
-                    shrink: true, // Keeps the label always visible at the top
-                    style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' }, // Position label top right
+                    shrink: true,
+                    style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' },
                   }} 
                   InputProps={{
                     endAdornment: (
@@ -267,8 +239,8 @@ function App() {
                     placeholder="" 
                     fullWidth
                     InputLabelProps={{
-                      shrink: true, // Keeps the label always visible at the top
-                      style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' }, // Position label top right
+                      shrink: true, 
+                      style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' }, 
                     }} 
                     InputProps={{
                       endAdornment: (
@@ -288,8 +260,8 @@ function App() {
                     placeholder="" 
                     fullWidth
                     InputLabelProps={{
-                      shrink: true, // Keeps the label always visible at the top
-                      style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' }, // Position label top right
+                      shrink: true, 
+                      style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' },
                     }} 
                     InputProps={{
                       endAdornment: (
@@ -309,8 +281,8 @@ function App() {
                   placeholder="" 
                   fullWidth
                   InputLabelProps={{
-                    shrink: true, // Keeps the label always visible at the top
-                    style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' }, // Position label top right
+                    shrink: true,
+                    style: { textAlign: 'left', right: 0, position: 'absolute', transformOrigin: 'top left' },
                   }} 
                   InputProps={{
                     endAdornment: (
@@ -338,7 +310,6 @@ function App() {
               placeholder="Name, email, etc..." />
         </div>
         <div style={{ marginTop: 10 }}>
-
           <DataGrid
             rows={rows}
             columns={columns}
@@ -356,50 +327,6 @@ function App() {
             disableColumnResize={true}
             disableColumnMenu={true}
         />
-
-          {/* <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
-              <TableHead>
-                <TableRow>
-                  <TableCell align="left">PO#</TableCell>
-                  <TableCell align="left">OE#</TableCell>
-                  <TableCell align="left">Date Created</TableCell>
-                  <TableCell align="left">Created Time</TableCell>
-                  <TableCell align="left">Created By</TableCell>
-                  <TableCell align="left">Customer No</TableCell>
-                  <TableCell align="left">Customer Name</TableCell>
-                  <TableCell align="left">Customer PO</TableCell>
-                  <TableCell align="left">Product</TableCell>
-                  <TableCell align="left">Actions</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row) => (
-                  <TableRow
-                    key={row.po}
-                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                  >
-                    <TableCell component="th" scope="row">
-                      {row.po}
-                    </TableCell>
-                    <TableCell align="left">{row.oe}</TableCell>
-                    <TableCell align="left">{row.dateCreated}</TableCell>
-                    <TableCell align="left">{row.createdBy}</TableCell>
-                    <TableCell align="left">{row.createdTime}</TableCell>
-                    <TableCell align="left">{row.customerNo}</TableCell>
-                    <TableCell align="left">{row.customerName}</TableCell>
-                    <TableCell align="left">{row.customerPO}</TableCell>
-                    <TableCell align="left">{row.product}</TableCell>
-                    <TableCell align="left">  
-                        <WorkIcon /> 
-                        <EventIcon /> 
-                        <DeleteIcon />
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer> */}
         </div>
       </div>
     </div>
