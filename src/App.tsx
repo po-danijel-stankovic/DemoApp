@@ -25,6 +25,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Box from '@mui/material/Box';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 function App() {
   // function createData(
@@ -135,13 +136,17 @@ function App() {
 
             <Box sx={{ flexGrow: 1 }} />
 
-            <AccountCircle />
+            <AccountCircle /> <span style={{marginLeft: 5}}>Seksi Zvercina</span>
             
           </Toolbar>
         </AppBar>
       </div>
 
-      <div style={{ padding: '0 20px', textAlign: 'left', marginBottom: '40px' }}>
+      <Box display="flex" justifyContent="flex-end" marginTop={2} marginRight={2}>
+        <HelpOutlineIcon />
+      </Box>
+
+      <div style={{ padding: '0 20px', textAlign: 'left' }}>
         <h2>Order Manager</h2>
 
         <h3>Filters</h3>
