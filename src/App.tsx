@@ -36,21 +36,23 @@ import { log } from "console";
 import { DesktopDatePicker } from "@mui/x-date-pickers-pro";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
 
 function App() {
-  const [warehouse, setWarehouse] = useState("All");
+  const [warehouse, setWarehouse] = useState('');
 
   const handleWarehouseChange = (event: SelectChangeEvent<string>) => {
     setWarehouse(event.target.value);
   };
 
-  const [orderStatus, setOrderStatus] = useState("Quoted");
+  const [orderStatus, setOrderStatus] = useState('');
 
   const handleOrderStatusChange = (event: SelectChangeEvent<string>) => {
     setOrderStatus(event.target.value);
   };
 
-  const [orderType, setOrderType] = useState("Quote"); 
+  const [orderType, setOrderType] = useState(''); 
 
   const handleOrderTypeChange = (event: SelectChangeEvent<string>) => {
     setOrderType(event.target.value);
@@ -266,50 +268,59 @@ function App() {
           {/* Row 2 */}
           <Grid item xs={4}>
             <Typography variant="h6">
-              <Select
-                id="order-status-select"
-                value={orderStatus}
-                onChange={handleOrderStatusChange}
-                fullWidth
-                displayEmpty
-                inputProps={{ "aria-label": "Select Order Status" }}
-              >
-                <MenuItem value="Quoted">Quoted</MenuItem>
-                <MenuItem value="Ordered">Ordered</MenuItem>
-                <MenuItem value="Shipped">Shipped</MenuItem>
-              </Select>
+              <FormControl fullWidth>
+                <InputLabel>Order Status</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label-os"
+                  id="demo-simple-select-os"
+                  value={orderStatus}
+                  label="Order Status"
+                  onChange={handleOrderStatusChange}
+                >
+                  <MenuItem value={10}>All</MenuItem>
+                  <MenuItem value={20}>Ordered</MenuItem>
+                  <MenuItem value={30}>Quoted</MenuItem>
+                  <MenuItem value={30}>Shipped</MenuItem>
+                </Select>
+              </FormControl>
             </Typography>
           </Grid>
           <Grid item xs={4}>
             <Typography variant="h6">
-              <Select
-                id="order-type-select"
-                value={orderType}
-                onChange={handleOrderTypeChange}
-                fullWidth
-                displayEmpty
-                inputProps={{ "aria-label": "Select Order Type" }}
-              >
-                <MenuItem value="Quote">Quote</MenuItem>
-                <MenuItem value="Stocked Order">Stocked Order</MenuItem>
-                <MenuItem value="Return Merchandise">Return Merchandise</MenuItem>
-              </Select>
+              <FormControl fullWidth>
+                <InputLabel>Order Type</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label-ot"
+                  id="demo-simple-select-ot"
+                  value={orderType}
+                  label="Order Type"
+                  onChange={handleOrderTypeChange}
+                >
+                  <MenuItem value={10}>All</MenuItem>
+                  <MenuItem value={20}>Quote</MenuItem>
+                  <MenuItem value={30}>Return Merchendise</MenuItem>
+                  <MenuItem value={30}>Stocked Order</MenuItem>
+                </Select>
+              </FormControl>
             </Typography>
           </Grid>
           <Grid item xs={4}>
             <Typography variant="h6">
-              <Select
-                id="warehouse-select"
-                value={warehouse}
-                onChange={handleWarehouseChange}
-                fullWidth
-                displayEmpty
-                inputProps={{ "aria-label": "Select Warehouse" }}
-              >
-                <MenuItem value="All">All</MenuItem>
-                <MenuItem value="WWRI">WWRI</MenuItem>
-                <MenuItem value="ABNY">ABNY</MenuItem>
-              </Select>
+              <FormControl fullWidth>
+                  <InputLabel>Warehouse</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label-whse"
+                    id="demo-simple-select-whse"
+                    value={warehouse}
+                    label="Warehouse"
+                    onChange={handleWarehouseChange}
+                  >
+                    <MenuItem value={10}>All</MenuItem>
+                    <MenuItem value={30}>ABNY</MenuItem>
+                    <MenuItem value={30}>TPA</MenuItem>
+                    <MenuItem value={20}>WWRI</MenuItem>
+                  </Select>
+                </FormControl>
             </Typography>
           </Grid>
 
