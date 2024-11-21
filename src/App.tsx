@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import TextField from "@mui/material/TextField";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -28,13 +28,34 @@ import {
   TablePagination,
   TableRow,
   Tooltip,
+  SelectChangeEvent 
 } from "@mui/material";
 
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { log } from "console";
 import { DesktopDatePicker } from "@mui/x-date-pickers-pro";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 
 function App() {
+  const [warehouse, setWarehouse] = useState("All");
+
+  const handleWarehouseChange = (event: SelectChangeEvent<string>) => {
+    setWarehouse(event.target.value);
+  };
+
+  const [orderStatus, setOrderStatus] = useState("Quoted");
+
+  const handleOrderStatusChange = (event: SelectChangeEvent<string>) => {
+    setOrderStatus(event.target.value);
+  };
+
+  const [orderType, setOrderType] = useState("Quote"); 
+
+  const handleOrderTypeChange = (event: SelectChangeEvent<string>) => {
+    setOrderType(event.target.value);
+  };
+
   const rows = [
     {
       id: 1,
@@ -247,65 +268,50 @@ function App() {
           {/* Row 2 */}
           <Grid item xs={4}>
             <Typography variant="h6">
-              <TextField
-                id="outlined-helperText"
-                label="Order Status"
-                defaultValue=""
-                placeholder=""
+              <Select
+                id="order-status-select"
+                value={orderStatus}
+                onChange={handleOrderStatusChange}
                 fullWidth
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <ArrowDropDownIcon />
-                    </InputAdornment>
-                  ),
-                }}
-              />
+                displayEmpty
+                inputProps={{ "aria-label": "Select Order Status" }}
+              >
+                <MenuItem value="Quoted">Quoted</MenuItem>
+                <MenuItem value="Ordered">Ordered</MenuItem>
+                <MenuItem value="Shipped">Shipped</MenuItem>
+              </Select>
             </Typography>
           </Grid>
           <Grid item xs={4}>
             <Typography variant="h6">
-              <TextField
-                id="outlined-helperText"
-                label="Order Type"
-                defaultValue=""
-                placeholder=""
+              <Select
+                id="order-type-select"
+                value={orderType}
+                onChange={handleOrderTypeChange}
                 fullWidth
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <ArrowDropDownIcon />
-                    </InputAdornment>
-                  ),
-                }}
-              />
+                displayEmpty
+                inputProps={{ "aria-label": "Select Order Type" }}
+              >
+                <MenuItem value="Quote">Quote</MenuItem>
+                <MenuItem value="Stocked Order">Stocked Order</MenuItem>
+                <MenuItem value="Return Merchandise">Return Merchandise</MenuItem>
+              </Select>
             </Typography>
           </Grid>
           <Grid item xs={4}>
             <Typography variant="h6">
-              <TextField
-                id="outlined-helperText"
-                label="Warehouse"
-                defaultValue=""
-                placeholder=""
+              <Select
+                id="warehouse-select"
+                value={warehouse}
+                onChange={handleWarehouseChange}
                 fullWidth
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <ArrowDropDownIcon />
-                    </InputAdornment>
-                  ),
-                }}
-              />
+                displayEmpty
+                inputProps={{ "aria-label": "Select Warehouse" }}
+              >
+                <MenuItem value="All">All</MenuItem>
+                <MenuItem value="WWRI">WWRI</MenuItem>
+                <MenuItem value="ABNY">ABNY</MenuItem>
+              </Select>
             </Typography>
           </Grid>
 
