@@ -12851,6 +12851,97 @@
           }
         }
       }
+    },
+    "MuiAppBar": {
+      "styleOverrides": {
+        "root": {
+          "&.MuiPaper-root&.MuiPaper-elevation&.MuiAppBar-positionStatic": {
+            "&.MuiAppBar-colorPrimary": {
+              "background": "#05403e"
+            },
+            "&.MuiAppBar-colorSecondary": {
+              "background": "#bbd768"
+            },
+            "&.MuiAppBar-colorDefault": {
+              "background": "#f5f5f5"
+            },
+            "&.MuiAppBar-colorInherit White": {
+              "background": "#ffffff"
+            },
+            "&.MuiAppBar-colorTransparent": {
+              "background": "rgba(0, 0, 0, 0)"
+            }
+          },
+          "&.MuiPaper-root&.MuiPaper-elevation&.MuiAppBar-positionFixed": {
+            "&.MuiAppBar-colorPrimary": {
+              "background": "#05403e"
+            },
+            "&.MuiAppBar-colorSecondary": {
+              "background": "#bbd768"
+            },
+            "&.MuiAppBar-colorDefault": {
+              "background": "#f5f5f5"
+            },
+            "&.MuiAppBar-colorInherit White": {
+              "background": "#ffffff"
+            },
+            "&.MuiAppBar-colorTransparent": {
+              "background": "rgba(0, 0, 0, 0)"
+            }
+          },
+          "&.MuiPaper-root&.MuiPaper-elevation&.MuiAppBar-positionAbsolute": {
+            "&.MuiAppBar-colorPrimary": {
+              "background": "#05403e"
+            },
+            "&.MuiAppBar-colorSecondary": {
+              "background": "#bbd768"
+            },
+            "&.MuiAppBar-colorDefault": {
+              "background": "#f5f5f5"
+            },
+            "&.MuiAppBar-colorInherit White": {
+              "background": "#ffffff"
+            },
+            "&.MuiAppBar-colorTransparent": {
+              "background": "rgba(0, 0, 0, 0)"
+            }
+          },
+          "&.MuiPaper-root&.MuiPaper-elevation&.MuiAppBar-positionSticky": {
+            "&.MuiAppBar-colorPrimary": {
+              "background": "#05403e"
+            },
+            "&.MuiAppBar-colorSecondary": {
+              "background": "#bbd768"
+            },
+            "&.MuiAppBar-colorDefault": {
+              "background": "#f5f5f5"
+            },
+            "&.MuiAppBar-colorInherit White": {
+              "background": "#ffffff"
+            },
+            "&.MuiAppBar-colorTransparent": {
+              "background": "rgba(0, 0, 0, 0)"
+            }
+          },
+          "&.MuiPaper-root&.MuiPaper-elevation&.MuiAppBar-positionRelative": {
+            "&.MuiAppBar-colorPrimary": {
+              "background": "#05403e"
+            },
+            "&.MuiAppBar-colorSecondary": {
+              "background": "#bbd768"
+            },
+            "&.MuiAppBar-colorDefault": {
+              "background": "#f5f5f5"
+            },
+            "&.MuiAppBar-colorInherit White": {
+              "background": "#ffffff"
+            },
+            "&.MuiAppBar-colorTransparent": {
+              "background": "rgba(0, 0, 0, 0)"
+            }
+          }
+        }
+      }
     }
   }
 }

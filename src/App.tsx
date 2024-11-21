@@ -183,7 +183,6 @@ function App() {
     <div className="App">
       <div>
         <AppBar position="static" color="primary">
-          <Paper>
             <Toolbar>
               <IconButton
                 size="large"
@@ -197,7 +196,6 @@ function App() {
               <Box sx={{ flexGrow: 1 }} />
               <AccountCircle /> <span style={{ marginLeft: 5 }}>John Doe</span>
             </Toolbar>
-          </Paper>
         </AppBar>
       </div>
 
