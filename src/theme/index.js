@@ -113,19 +113,19 @@ const createResponsiveTheme = (isSmallScreen) => {
       MuiInputBase: {
         ...themeJson.components.MuiInputBase,
       },
+      MuiAppBar: {
+        ...themeJson.components.MuiAppBar
+      },
       MuiTextField: {
         ...themeJson.components.MuiTextField,
         MuiToolbar: {
           ...themeJson.components.MuiToolbar,
         },
-        MuiAppbar: {
-          // ...themeJson.components.MuiAppbar
-        },
         MuiIconButton: {
           ...themeJson.components.MuiIconButton,
-        },
-      },
-    },
+        }
+      }
+    }
   });
 };
 
